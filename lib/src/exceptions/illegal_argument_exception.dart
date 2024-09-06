@@ -1,4 +1,4 @@
-part of flutter_disk_lru_cache;
+part of disk_lru_cache;
 
 class IllegalArgumentException implements Exception {
   final dynamic message;

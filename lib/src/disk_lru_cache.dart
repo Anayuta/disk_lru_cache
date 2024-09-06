@@ -1,4 +1,4 @@
-part of flutter_disk_lru_cache;
+part of disk_lru_cache;
 
 class DiskLruCache {
   /// 操作的记录文件名

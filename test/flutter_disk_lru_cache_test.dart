@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:flutter_disk_lru_cache/flutter_disk_lru_cache.dart';
+import 'package:disk_lru_cache/flutter_disk_lru_cache.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() async {

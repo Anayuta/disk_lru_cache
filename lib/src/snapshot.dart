@@ -1,4 +1,4 @@
-part of flutter_disk_lru_cache;
+part of disk_lru_cache;
 
 class Snapshot {
   final String key;

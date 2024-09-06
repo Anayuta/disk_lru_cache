@@ -1,4 +1,4 @@
-part of flutter_disk_lru_cache;
+part of disk_lru_cache;
 
 /// 文件的映射
 class _Entry {

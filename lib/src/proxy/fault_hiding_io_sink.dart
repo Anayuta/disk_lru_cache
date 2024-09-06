@@ -1,4 +1,4 @@
-part of flutter_disk_lru_cache;
+part of disk_lru_cache;
 
 /// 错误的回调
 typedef void ErrorVoidCallback(Object e);

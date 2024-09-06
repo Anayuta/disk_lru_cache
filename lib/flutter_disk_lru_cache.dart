@@ -1,4 +1,4 @@
-library flutter_disk_lru_cache;
+library disk_lru_cache;
 
 import 'dart:async';
 import 'dart:collection';
