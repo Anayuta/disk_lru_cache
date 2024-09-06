@@ -196,6 +196,7 @@ class DiskLruCache {
   /// 计算初始大小并收集垃圾，作为打开缓存。脏条目假定不一致，将被删除。
   Future<void> _processJournal() async {
     await _deleteIfExists(journalFileTmp);
+    List<String> keysToRemove = [];
     _lruEntries.forEach(
       (String key, _Entry entry) {
         if (entry.currentEditor == null) {
@@ -208,10 +209,13 @@ class DiskLruCache {
             _deleteIfExists(entry.getCleanFile(i));
             _deleteIfExists(entry.getDirtyFile(i));
           }
-          _lruEntries.remove(key);
+          keysToRemove.add(key);
         }
       },
     );
+    keysToRemove.forEach((key) {
+      _lruEntries.remove(key);
+    });
   }
 
   /// 重新构建记录文件

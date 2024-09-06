@@ -1,7 +1,7 @@
 name: flutter_disk_lru_cache
 description: Dart version based on Android disk LRU cache migration
-version: 1.0.1
-homepage: https://github.com/Herryjoeson/flutter_disk_lru_cache.git
+version: 1.0.0
+homepage: https://github.com/Anayuta/disk_lru_cache.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
