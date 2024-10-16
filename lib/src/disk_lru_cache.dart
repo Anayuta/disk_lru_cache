@@ -287,8 +287,12 @@ class DiskLruCache {
   /// 清空不用的缩减内存
   void _trimToSize() {
     while (_size > _maxSize) {
-      MapEntry<String, _Entry> toEvict = _lruEntries.entries.iterator.current;
-      remove(toEvict.key);
+      Iterator<MapEntry<String, _Entry>> iterator = _lruEntries.entries.iterator;
+      //current 可能会存在空的情况
+      if (iterator.moveNext()) {
+        MapEntry<String, _Entry> toEvict = iterator.current;
+        remove(toEvict.key);
+      }
     }
   }
 
